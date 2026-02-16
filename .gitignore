@@ -1,0 +1,19 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite DB
+*.db
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Pytest
+.pytest_cache/
+
+# macOS
+.DS_Store

@@ -10,12 +10,12 @@ def create_url(db: Session, original_url: str) -> URL:
     """
     row = URL(original_url=original_url, click_count=0)
     db.add(row)
-    db.commit()
+    db.flush()
     db.refresh(row)  # ensures row.id is available
 
     # Generate short_code from the DB-generated id
     row.short_code = encode_base62(row.id)
-    db.add(row)
+    
     db.commit()
     db.refresh(row)
 

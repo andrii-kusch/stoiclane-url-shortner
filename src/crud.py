@@ -26,9 +26,10 @@ def get_url_by_code(db: Session, short_code: str) -> URL | None:
     return db.query(URL).filter(URL.short_code == short_code).first()
 
 
-def increment_click_count(db: Session, row: URL) -> URL:
-    row.click_count = (row.click_count or 0) + 1
-    db.add(row)
+def increment_click_count(db: Session, row: URL) -> None:
+    db.execute(
+        update(URL)
+        .where(URL.id == row.id)
+        .values(click_count=URL.click_count + 1)
+    )
     db.commit()
-    db.refresh(row)
-    return row

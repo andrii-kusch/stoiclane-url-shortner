@@ -18,3 +18,7 @@ It supports creating short links and redirecting to original URLs, with a click 
 ## Run (Docker)
 ```bash
 docker compose up --build
+```
+
+## References
+- https://dev.to/jbrocher/fastapi-testing-a-database-5ao5

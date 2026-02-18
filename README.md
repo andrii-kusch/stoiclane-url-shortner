@@ -22,3 +22,4 @@ docker compose up --build
 
 ## References
 - https://dev.to/jbrocher/fastapi-testing-a-database-5ao5
+- https://www.augustinfotech.com/blogs/fastapi-unit-testing-with-dependency-overrides-a-complete-guide/
